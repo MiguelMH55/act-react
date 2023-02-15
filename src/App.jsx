@@ -17,8 +17,15 @@ function Form() {
       Nombre:   Nombre,
       Apellido: Apellido
     }
+    var vr = Estado.find(e=> e.Nombre === Nombre &&  e.Apellido === Apellido)
+    if (vr == undefined) {
+
+      setEstado([...Estado, usuario]);
+
+    } else {
+      alert("Usuario existente")
+    }
     
-    setEstado([...Estado, usuario]);
   }
   // const  mostrarUsuario = () =>{
   //   Estado.map(item =>(
